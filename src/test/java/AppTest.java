@@ -26,5 +26,7 @@ public class AppTest {
 
         Assert.assertSame("Тест провален, не корректная настройка бина HelloWorld", tree, leaf);
         Assert.assertNotSame("Тест провален, не корректная настройка бина Cat", one, two);
+
+
     }
 }
