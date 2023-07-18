@@ -10,5 +10,20 @@ public class App {
         HelloWorld bean =
                 (HelloWorld) applicationContext.getBean("helloworld");
         System.out.println(bean.getMessage());
+        HelloWorld bean1 =
+                (HelloWorld) applicationContext.getBean("helloworld");
+
+
+
+        ApplicationContext catApplicationContext =
+                new AnnotationConfigApplicationContext(AppConfig.class);
+        Cat catsBean =
+                (Cat) catApplicationContext.getBean("cats");
+        Cat catsBean1 =
+                (Cat) catApplicationContext.getBean("cats");
+
+        System.out.println(bean == bean1);
+        System.out.println(catsBean == catsBean1);
+
     }
 }
